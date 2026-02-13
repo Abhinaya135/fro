@@ -1,77 +1,87 @@
-/* ================= GENERAL ================= */
-body {
+/* ================= GLOBAL ================= */
+* {
   margin: 0;
+  padding: 0;
+  box-sizing: border-box;
   font-family: Arial, Helvetica, sans-serif;
-  background: #f5f5f5;
 }
 
-a {
-  text-decoration: none;
-  color: inherit;
+body {
+  background: #F4F9F9;
+  overflow-x: hidden;
 }
 
-/* ================= HERO SECTION ================= */
+/* ================= HERO ================= */
 .hero {
-  background: #111;
-  color: #fff;
-  padding: 20px 30px;
+  background: #f4c6c6;
+  padding: 20px 40px;
+  border-bottom: 1px solid #ddd;
 }
 
 .hero-row {
   display: flex;
   align-items: center;
   justify-content: space-between;
+  max-width: 1200px;
+  margin: auto;
   flex-wrap: wrap;
 }
 
 .hero-logo {
-  width: 100px;
+  width: 170px;
+  height: auto;
+}
+
+.hero-center {
+  text-align: center;
 }
 
 .hero-title {
-  font-size: 28px;
+  color: #B11218;
+  font-size: 34px;
   font-weight: bold;
 }
 
 .hero-subtitle {
-  font-size: 14px;
-  letter-spacing: 2px;
+  font-size: 18px;
+  color: #333;
 }
 
-.header-right .info-box {
+.info-box {
   display: flex;
   align-items: center;
-  gap: 10px;
+  gap: 12px;
 }
 
 .icon-box {
-  background: red;
+  background: #B11218;
   color: white;
   padding: 10px;
-  border-radius: 50%;
+  border-radius: 6px;
 }
 
 .phone,
 .email {
-  color: white;
-  font-size: 14px;
+  color: #B11218;
+  text-decoration: none;
+  font-weight: bold;
 }
 
 /* ================= NAVBAR ================= */
 .main-nav {
-  background: #c40000;
+  background: #B11218;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 10px 30px;
+  flex-wrap: wrap;
 }
 
 .main-menu {
   list-style: none;
   display: flex;
-  gap: 25px;
+  flex-wrap: wrap;
+  padding-left: 40px;
   margin: 0;
-  padding: 0;
 }
 
 .main-menu li {
@@ -79,248 +89,209 @@ a {
 }
 
 .main-menu a {
+  display: block;
+  padding: 0 15px;
+  line-height: 55px;
   color: white;
-  font-weight: bold;
-  font-size: 14px;
+  text-decoration: none;
+  border-right: 1px solid rgba(255, 255, 255, 0.4);
 }
 
-.main-menu a:hover {
-  color: #ffdada;
-}
-
-/* Dropdown */
-.dropdown-menu {
+.main-menu li ul {
   display: none;
   position: absolute;
+  top: 55px;
+  left: 0;
   background: white;
-  padding: 10px 0;
+  min-width: 180px;
   list-style: none;
-  min-width: 200px;
-  top: 30px;
+  padding: 0;
+  z-index: 1000;
 }
 
-.dropdown-menu li {
-  padding: 8px 15px;
-}
-
-.dropdown-menu li a {
+.main-menu li ul a {
   color: black;
-  font-weight: normal;
+  padding: 10px;
+  line-height: normal;
 }
 
-.dropdown:hover .dropdown-menu {
+.main-menu li:hover ul {
   display: block;
 }
 
-/* Quote Button */
-.quote a {
+.quote {
   background: black;
-  color: white;
-  padding: 8px 15px;
-  font-size: 13px;
-  border-radius: 4px;
 }
 
-.quote a:hover {
-  background: #333;
+.quote a {
+  color: white;
+  padding: 0 25px;
+  line-height: 55px;
+  display: block;
+  font-weight: bold;
+  text-decoration: none;
 }
 
 /* ================= COMPANY SECTION ================= */
 .company-section {
-  padding: 50px 20px;
-  background: #fff;
+  padding: 60px 15px;
 }
 
-.company-title {
-  font-size: 28px;
-  font-weight: bold;
-  margin-bottom: 20px;
+.image-box img {
+  width: 100%;
+  max-width: 100%;
+  height: auto;
+  border: 1px solid #ccc;
 }
 
-.location-title {
-  margin-top: 20px;
-  font-size: 20px;
-  color: #c40000;
-}
-
-.description {
-  max-width: 800px;
-  margin: auto;
-}
-
-.details-box {
-  margin-top: 20px;
-}
-
-/* ================= HERO CONTACT BOX ================= */
+/* ================= HERO BOX ================= */
 .hero-box {
-  background: #c40000;
-  color: white;
-  padding: 40px 20px;
+  width: 100%;
+  min-height: 160px;
+  background-color: #f4c6c6;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 20px;
 }
 
 .hero-number {
-  font-size: 32px;
-  font-weight: bold;
+  font-size: 34px;
+  font-weight: 700;
+  color: #8b0000;
 }
 
 .hero-btn {
-  background: black;
-  color: white;
-  padding: 10px 20px;
-  border-radius: 5px;
-  display: inline-block;
-  margin-top: 10px;
+  background-color: #8b0000;
+  color: #fff;
+  border: none;
+  padding: 12px 32px;
+  cursor: pointer;
 }
 
-.hero-btn:hover {
-  background: #333;
-}
-
-/* ================= ABOUT + FEATURES SECTION ================= */
+/* ================= LL SECTION ================= */
 .ll-section {
-  padding: 50px 20px;
-  background: #f9f9f9;
+  padding: 80px 20px;
+  background-color: #f9f9f9;
 }
 
 .ll-container {
+  max-width: 1200px;
+  margin: auto;
   display: flex;
-  gap: 40px;
+  gap: 60px;
   align-items: center;
-  justify-content: center;
   flex-wrap: wrap;
 }
 
 .left-box {
-  max-width: 350px;
+  width: 350px;
+  padding: 60px 40px;
+  border: 6px solid #B11218;
+  background-color: #fff;
+  text-align: center;
 }
 
-.title {
-  font-size: 26px;
-  font-weight: bold;
-}
-
-.red-line {
-  width: 60px;
-  height: 3px;
-  background: red;
-  margin: 15px 0;
-}
-
-.subtitle {
-  margin-bottom: 15px;
-}
-
-.view-more {
-  background: red;
-  color: white;
-  padding: 8px 15px;
-  border-radius: 4px;
-}
-
-/* Right Grid */
 .right-grid {
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 20px;
+  grid-template-columns: 1fr 1fr;
+  gap: 40px;
   max-width: 600px;
 }
 
 .item {
-  background: white;
-  padding: 20px;
-  border-radius: 8px;
   text-align: center;
-  box-shadow: 0 3px 10px rgba(0,0,0,0.08);
-  transition: 0.3s;
-}
-
-.item:hover {
-  transform: translateY(-5px);
 }
 
 .icon {
+  width: 80px;
+  height: 80px;
+  border: 2px solid #B11218;
+  border-radius: 12px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   font-size: 40px;
-  margin-bottom: 10px;
-}
-
-.item-title {
-  font-weight: bold;
-  margin-bottom: 8px;
-  color: #c40000;
-}
-
-.item-text {
-  font-size: 14px;
-  color: #444;
+  margin: 0 auto 15px;
 }
 
 /* ================= FOOTER ================= */
 .site-footer {
-  background: #111;
-  color: #ccc;
-  padding: 40px 20px;
+  position: relative;
+  background: linear-gradient(135deg, #f4c6c6, #fff0f0);
+  padding: 60px 20px 30px;
 }
 
-.site-footer h5 {
-  color: white;
-}
-
-.site-footer a {
-  color: #ccc;
-}
-
-.site-footer a:hover {
-  color: white;
+.footer-wave {
+  position: absolute;
+  top: -40px;
+  left: 0;
+  width: 100%;
+  height: 40px;
+  background: #b11217;
+  clip-path: polygon(0 100%, 100% 0, 100% 100%, 0% 100%);
 }
 
 .footer-bottom {
-  font-size: 13px;
+  margin-top: 20px;
+  font-size: 14px;
 }
 
 /* ================= MOBILE RESPONSIVE ================= */
+/* ================= EXTRA MOBILE IMPROVEMENTS ================= */
 @media (max-width: 768px) {
 
-  .hero-row {
-    flex-direction: column;
-    text-align: center;
-    gap: 15px;
-  }
-
-  .main-nav {
-    flex-direction: column;
-    gap: 10px;
-  }
-
-  .main-menu {
-    flex-direction: column;
-    gap: 10px;
+  /* Improve company section spacing */
+  .company-section {
+    padding: 40px 15px;
     text-align: center;
   }
 
-  .quote {
+  /* Better hero box padding */
+  .hero-box {
+    padding: 30px 15px;
+  }
+
+  .hero-btn {
     margin-top: 10px;
+    width: 100%;
+    max-width: 250px;
   }
 
-  .ll-container {
-    flex-direction: column;
+  /* Improve LL Section spacing */
+  .ll-section {
+    padding: 50px 15px;
   }
 
-  .right-grid {
-    grid-template-columns: 1fr;
+  /* Center left box properly */
+  .left-box {
+    margin: auto;
   }
 
-  .hero-title {
-    font-size: 22px;
-  }
-
-  .hero-number {
-    font-size: 24px;
-  }
-
+  /* Improve icon box size on small screens */
   .icon {
-    font-size: 35px;
+    width: 70px;
+    height: 70px;
+    font-size: 32px;
+  }
+
+  /* Better spacing for feature items */
+  .item {
+    padding: 10px 0;
+  }
+
+  /* Footer spacing */
+  .site-footer {
+    padding: 40px 15px 20px;
+    text-align: center;
+  }
+
+  /* Make dropdown full width on mobile */
+  .main-menu li ul {
+    position: static;
+    width: 100%;
+    box-shadow: none;
   }
 
 }
-
