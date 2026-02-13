@@ -474,12 +474,82 @@ font-style:Bold;
 }
 
 /* Responsive tweaks */
-@media(max-width:768px) {
-  .footer-wave {
-    height: 30px;
+/* ===== MOBILE NAV & HEADER FIX ===== */
+@media (max-width: 768px) {
+
+  .hero-row {
+    flex-direction: column;
+    text-align: center;
+    gap: 10px;
   }
-  .site-footer h5 {
-    font-size: 16px;
+
+  /* NAV RESPONSIVE */
+  .main-nav {
+    flex-direction: column;
+    padding: 0;
   }
+
+  .main-menu {
+    flex-direction: column;
+    width: 100%;
+    padding-left: 0;
+    margin-bottom: 10px;
+  }
+
+  .main-menu li a {
+    padding: 12px 10px;
+    border-bottom: 1px solid rgba(255,255,255,0.3);
+    width: 100%;
+  }
+
+  .main-menu li ul {
+    position: static;
+    width: 100%;
+  }
+
+  .quote {
+    width: 100%;
+    text-align: center;
+    margin-bottom: 10px;
+  }
+
+  .quote a {
+    padding: 12px;
+    display: block;
+  }
+}
+
+/* ===== FOOTER STACK ON MOBILE ===== */
+@media (max-width: 768px) {
+
+  .site-footer .footer-content {
+    flex-direction: column;
+  }
+
+  .site-footer .row {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  .site-footer .col-md-4 {
+    width: 100%;
+    text-align: center;
+  }
+
+  .site-footer hr {
+    margin: 15px 0;
+  }
+
+  .footer-bottom {
+    font-size: 14px;
+    padding-top: 10px;
+  }
+}
+
+/* ===== REMOVE ANY EXCESS WIDTH ===== */
+html, body, .main-nav, .site-footer {
+  overflow-x: hidden !important;
+  width: 100%;
 }
 
